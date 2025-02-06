@@ -1,12 +1,11 @@
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
 
 resource "aws_instance" "devops_instance" {
-  ami           = "ami-0c55b159cbfafe1f0"
+  ami           = "ami-04b4f1a9cf54c11d0"
   instance_type = "t2.medium"
-  key_name      = "my-key"
-
+  key_name      = "foxops"
   user_data = <<-EOF
               #!/bin/bash
               apt-get update
